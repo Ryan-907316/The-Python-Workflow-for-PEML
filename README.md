@@ -14,8 +14,10 @@ Dependencies: See requirements.txt
 
 Description:
 
-This script implements a highly customisable workflow for regression tasks using machine learning.
-It incorporates a wide range of features suited for engineering problems and physics-enhanced machine learning.
+Engineering systems often exhibit complex nonlinearities due to factors such as friction, temperature, and material properties. Traditional physics-based simulations, which rely on solving complex equations to model real-world systems- such as airflow over a plane wing or heat transfer in materials- are highly accurate, but computationally expensive. Machine Learning (ML) offers a faster alternative by learning patterns from data, yet it often struggles to make accurate predictions on new, unseen cases. Physics-Enhanced Machine Learning (PEML) combines scientific equations with ML, improving prediction accuracy while ensuring models adhere to key principles of real-world physics, such as energy conservation. To evaluate its practical effectiveness, this project applies PEML to an engineering problem: modelling a DC motor’s speed and torque, where nonlinearities challenge both traditional simulations and standalone ML models.
+To achieve this, a Python-based workflow was developed to systematically implement and evaluate PEML for DC motor modelling. The workflow includes data preprocessing, feature engineering, hyperparameter optimisation, interpretability analysis, and statistical validation to ensure rigorous model evaluation. Standalone ML and PEML models were evaluated using Leave-One-Group-Out (LOGO) validation to test generalisation, and a Kruskal-Wallis statistical test assessed whether PEML’s improvements over ML were statistically significant. The workflow was tested on DC motor datasets synthesised in MATLAB, comparing PEML against standalone ML. Results showed that PEML significantly outperformed standalone ML in predicting motor speed, achieving a predictive R^2 of 0.93- a 55.7% improvement. Additionally, PEML increased cross-validation scores by 19% and reduced the two-standard deviation prediction spread by 67%, improving robustness. However, for motor torque, PEML’s improvements were marginal or even detrimental, likely because the governing equations were already sufficiently accurate.
+These findings highlight that PEML is highly effective when physical models fail to capture nonlinearities but may be unnecessary when governing equations already provide strong estimates. The workflow offers a structured approach for determining when and where PEML is most beneficial in engineering applications. Future work could explore applying this workflow to other engineering applications or the addition of features in the workflow, such as dimensionality reduction, multi-objective optimisation, or real-time ML integration.
+
 The workflow includes:
 
 - Box and scatter plots of features and target variables
@@ -37,12 +39,15 @@ Visit https://www.python.org/downloads/ to download Python for your system and f
 >>pip install [PASTE PACKAGES HERE]
 
 Alternatively, the user may also download the requirements.txt file and run this command to run install everything at once:
+
 >>pip install -r requirements.txt
 
 4)	After all the packages have been installed, navigate to the workflow .py file, and run the program. The workflow should begin without any issues.
 
 If the reader encounters any issues running the script, please contact the author via this email: cheungkh@lancaster.ac.uk
+
 This report uses Version 0.1.0 of the workflow. Future versions may have updated dependencies, so ensure that the appropriate version of the workflow and packages are used.
+
 Note: This workflow uses pywin32, a library that only works on Windows operating systems. As of version 0.1.0, this workflow is only compatible with Windows.
 
 To customise the workflow to work on your device:
@@ -57,11 +62,19 @@ On line 2539, if you wish to load your .pkl file (or any .pkl file), paste the p
 
 In terms of workflow setting customisation:
 
+
 Test/train split: Line 364
+
 Display a dummy for the distance correlation matrix: Line 460
+
 Uncertainty Quantification settings: Lines 852-858
+
 ICE, PDP and SHAP plot settings: Lines 1047-1050
+
 Random Search settings: Lines 1212 to 1216
+
 Hyperopt settings: Lines 1429 to 1430
+
 Scikit-optimize settings: Lines 1610 to 1612
+
 Cross Validation settings: Lines 2069-2081
