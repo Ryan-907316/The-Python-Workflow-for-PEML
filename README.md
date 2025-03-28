@@ -3,9 +3,13 @@
 (Currently untitled, but in future versions a name will be given)
 
 Code developed by Ryan Cheung as part of a 3rd Year Individual Project at Lancaster University
+
 Title: Developing a Python workflow to aid in Physics-Enhanced Machine Learning applications in engineering
+
 Date: Friday, March 28th 2025
+
 Python Version used: 3.12.6
+
 Dependencies: See requirements.txt
 
 Description:
