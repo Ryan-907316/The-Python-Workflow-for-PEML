@@ -1,4 +1,4 @@
-# The-Python-Workflow-for-Physics-Enhanced-Machine-Learning
+# The Python Workflow for Physics Enhanced Machine Learning
 
 (Currently untitled, but in future versions a name will be given)
 
