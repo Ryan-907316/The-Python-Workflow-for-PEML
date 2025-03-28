@@ -30,10 +30,11 @@ To run the workflow, follow these steps:
 Visit https://www.python.org/downloads/ to download Python for your system and follow the instructions to download Python. Ensure the “Add Python to PATH” option is ticked during installation.
 2)	Download the .py file and place it in a known directory on your system. 
 3)	Open the requirements.txt and copy all the names of the packages. Then, open a terminal and run:
-pip install [PASTE PACKAGES HERE]
+>>pip install [PASTE PACKAGES HERE]
 
 Alternatively, the user may also download the requirements.txt file and run this command to run install everything at once:
-pip install -r requirements.txt
+>>pip install -r requirements.txt
+
 4)	After all the packages have been installed, navigate to the workflow .py file, and run the program. The workflow should begin without any issues.
 
 If the reader encounters any issues running the script, please contact the author via this email: cheungkh@lancaster.ac.uk
